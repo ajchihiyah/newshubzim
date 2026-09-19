@@ -1,0 +1,6 @@
+{
+  "name": "NewsHub Zimbabwe",
+  "description": "Zimbabwe's leading source for business, mining, tech, and agriculture news, live market data, and economic analysis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

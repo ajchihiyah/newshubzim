@@ -1,0 +1,27 @@
+[build]
+  functions = "netlify/functions"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://identity.netlify.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' https://images.unsplash.com https://*.unsplash.com https://cdn.pixabay.com https://*.pexels.com data: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.frankfurter.app https://financialmodelingprep.com https://docs.google.com https://cdn.jsdelivr.net https://www.herald.co.zw https://www.chronicle.co.zw https://www.newsday.co.zw https://dailynews.co.zw https://www.zimlive.com https://www.newzimbabwe.com https://www.theindependent.co.zw https://www.thestandard.co.zw https://www.zimeye.net https://iharare.com https://bulawayo24.com https://263chat.com https://www.zimbabwesituation.com https://mg.co.za https://www.dailymaverick.co.za http://feeds.news24.com https://ewn.co.za https://citizen.co.za http://rss.iol.io https://businesstech.co.za https://www.timeslive.co.za https://www.sowetanlive.co.za https://www.moneyweb.co.za https://www.thesouthafrican.com https://techcentral.co.za https://allafrica.com https://www.africanews.com https://www.sundaymail.co.zw https://fingaz.co.zw https://www.lusakatimes.com https://zambiareports.com https://mwebantu.com https://www.mmegi.bw https://thepatriot.co.bw https://www.namibian.com.na https://neweralive.na https://clubofmozambique.com https://opais.co.mz https://malawi24.com https://www.nyasatimes.com; media-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
